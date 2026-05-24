@@ -75,8 +75,8 @@ const fileGroups = [
   {
     label: "Kid Memory", color: TEAL,
     files: [
-      { name: "kid-profile.md", desc: "Idea, age, strengths, blockers, parent info" },
-      { name: "venture-log.md", desc: "Progress, compliance, concepts learned, open items" },
+      { name: "kid-profile.md", desc: "The idea, age, strengths, blockers" },
+      { name: "venture-log.md", desc: "Progress, concepts learned, open items" },
     ],
   },
   {
@@ -132,7 +132,7 @@ export default function Page() {
       </nav>
 
       {/* ── HERO ── */}
-      <section className="flex flex-col items-center justify-center text-center px-6 pt-36 pb-28">
+      <section className="flex flex-col items-center justify-center text-center px-6 pt-36 pb-24">
         <div className="max-w-2xl">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-8 text-xs font-medium"
                style={{ background: `${TEAL}12`, color: TEAL, border: `1px solid ${TEAL}28` }}>
@@ -149,11 +149,11 @@ export default function Page() {
           <p className="text-lg mb-3 mx-auto max-w-xl" style={{ color: TEXT_2, lineHeight: 1.8 }}>
             Fin is a 1:1 business coach that teaches real concepts through the thing they actually want to build — one module at a time, earned through real action.
           </p>
-          <p className="text-sm mb-10" style={{ color: TEXT_3 }}>
+          <p className="text-sm mb-8" style={{ color: TEXT_3 }}>
             The bakery. The dog-walking service. The friendship bracelets. Whatever the idea is — that&apos;s where every lesson starts.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
             <a href="#how-it-works" className="px-6 py-3 rounded-xl font-semibold text-white text-sm"
                style={{ background: TEAL }}>
               How it works →
@@ -164,64 +164,38 @@ export default function Page() {
               View on GitHub
             </a>
           </div>
-        </div>
-      </section>
 
-      {/* ── WHY 1:1 ── */}
-      <section className="py-20 px-6" style={{ background: BG_ALT }}>
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-14 items-center">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: TEAL }}>Why 1:1 matters</p>
-              <h2 className="text-3xl font-bold mb-5" style={{ lineHeight: 1.2 }}>
-                The concept has to fit the kid,<br />not the curriculum.
-              </h2>
-              <p className="text-base leading-relaxed mb-4" style={{ color: TEXT_2 }}>
-                Benjamin Bloom&apos;s research showed that 1:1 tutoring outperforms classroom instruction by two standard deviations. The average tutored student performs better than 98% of classroom-taught peers.
-              </p>
-              <p className="text-base leading-relaxed" style={{ color: TEXT_2 }}>
-                Fin applies that same principle to business education. Every concept — pricing, customer discovery, margins — is taught through your kid&apos;s actual idea. Not a hypothetical bakery. <em style={{ color: TEXT }}>Their</em> bakery. That&apos;s what makes it stick.
-              </p>
-            </div>
-            <div className="space-y-5">
-              {[
-                { label: "Classroom instruction", pct: 50, color: BORDER, textColor: TEXT_3 },
-                { label: "1:1 coaching with Fin",  pct: 98, color: TEAL,  textColor: TEAL  },
-              ].map(b => (
-                <div key={b.label}>
-                  <div className="flex justify-between text-sm mb-2">
-                    <span style={{ color: TEXT_2 }}>{b.label}</span>
-                    <span className="font-semibold" style={{ color: b.textColor }}>{b.pct}th percentile</span>
-                  </div>
-                  <div className="h-2.5 rounded-full" style={{ background: "#E5E2DC" }}>
-                    <div className="h-2.5 rounded-full" style={{ width: `${b.pct}%`, background: b.color }} />
-                  </div>
-                </div>
-              ))}
-              <p className="text-xs pt-1" style={{ color: TEXT_3 }}>
-                Source: Benjamin Bloom, &quot;The 2-Sigma Problem,&quot; 1984
-              </p>
-            </div>
+          {/* privacy note */}
+          <div className="inline-block text-left px-5 py-4 rounded-xl mx-auto"
+               style={{ background: BG_ALT, border: `1px solid ${BORDER}` }}>
+            <p className="text-sm font-medium mb-1" style={{ color: TEXT }}>What Fin doesn&apos;t ask for</p>
+            <p className="text-sm" style={{ color: TEXT_2 }}>
+              No name. No school. No personal information of any kind. The only input Fin needs is the idea — everything else stays inside the session and is never stored or repeated.
+            </p>
+            <p className="text-xs mt-2" style={{ color: TEXT_3 }}>
+              A future version will let parents configure their own guardrails before the first session.
+            </p>
           </div>
         </div>
       </section>
 
       {/* ── HOW IT WORKS ── */}
-      <section id="how-it-works" className="py-20 px-6" style={{ background: BG }}>
+      <section id="how-it-works" className="py-20 px-6" style={{ background: BG_ALT }}>
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-12">
             <p className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: TEAL }}>How it works</p>
-            <h2 className="text-3xl font-bold mb-3">No app. No curriculum. Just Claude Code and a folder.</h2>
-            <p className="text-base max-w-xl mx-auto" style={{ color: TEXT_2 }}>
-              Every coaching behavior lives in plain text. The memory is a file. The judgment is markdown.
+            <h2 className="text-3xl font-bold mb-4">1:1 coaching, built from a folder.</h2>
+            <p className="text-base max-w-2xl mx-auto" style={{ color: TEXT_2, lineHeight: 1.75 }}>
+              Benjamin Bloom&apos;s research showed that 1:1 tutoring outperforms classroom instruction by two standard deviations — the average tutored student performs better than 98% of classroom-taught peers. Fin applies that same principle to business education: every concept is taught through your kid&apos;s actual idea, not a hypothetical. That&apos;s what makes it stick.
             </p>
           </div>
 
+          {/* setup steps */}
           <div className="grid md:grid-cols-3 gap-5 mb-8">
             {[
-              { step: "1", title: "Open with Claude Code", body: "Run Claude Code from the project directory. CLAUDE.md is read automatically — Fin is live before you type a word. No setup beyond that." },
-              { step: "2", title: "Fill the kid profile",  body: "kid-profile.md: the idea, the kid's age and strengths, the parent's background. Or let Fin run onboarding questions in the first session." },
-              { step: "3", title: "Start Module 1",        body: "Fin reads the profile, builds the first module, and begins coaching through the kid's actual idea. Module 2 and 3 unlock when they're earned." },
+              { step: "1", title: "Open with Claude Code", body: "Run Claude Code from the project directory. CLAUDE.md is read automatically — Fin is live before you type a word. No app. No login. No setup beyond that." },
+              { step: "2", title: "Drop in the idea",       body: "kid-profile.md holds one thing: what the kid wants to build. Age, strengths, and parent context go in too — or Fin collects them in the first session." },
+              { step: "3", title: "Start Module 1",         body: "Fin reads the profile and begins coaching through the idea immediately. Module 2 and 3 unlock only when the previous module is earned through real action." },
             ].map(s => (
               <div key={s.step} className="p-6 rounded-2xl"
                    style={{ background: SURFACE, border: `1px solid ${BORDER}`, boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}>
@@ -233,6 +207,7 @@ export default function Page() {
             ))}
           </div>
 
+          {/* stats */}
           <div className="grid md:grid-cols-3 gap-4 text-center mb-8">
             {[
               { n: "12", label: "files total" },
@@ -247,17 +222,16 @@ export default function Page() {
             ))}
           </div>
 
-          <div className="p-6 rounded-2xl"
+          {/* two people */}
+          <div className="p-6 rounded-2xl mb-5"
                style={{ background: SURFACE, border: `1px solid ${BORDER}`, boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}>
-            <div>
-              <p className="font-semibold mb-1" style={{ color: TEXT }}>Two people in every session</p>
-              <p className="text-sm leading-relaxed" style={{ color: TEXT_2 }}>
-                Fin coaches two people at once: the kid, and the parent who shows up as a co-learner. The kid runs the business. The parent learns alongside — not above. At the end of every session, Fin gives the parent a specific briefing: what to help with this week, and what not to do.
-              </p>
-            </div>
+            <p className="font-semibold mb-2" style={{ color: TEXT }}>Two people in every session</p>
+            <p className="text-sm leading-relaxed" style={{ color: TEXT_2 }}>
+              Fin is designed to be used with a parent in the room. The kid drives — the idea, the decisions, the work. The parent participates as a co-learner: engaged, but not in charge. At the end of every session, Fin produces a specific brief for the parent: one thing to help with this week, and one thing to leave alone.
+            </p>
           </div>
 
-
+          {/* architecture */}
           <div className="p-6 rounded-2xl"
                style={{ background: SURFACE, border: `1px solid ${BORDER}`, boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}>
             <p className="text-xs font-semibold uppercase tracking-wide mb-4" style={{ color: TEXT_3 }}>System architecture</p>
@@ -296,7 +270,7 @@ export default function Page() {
       </section>
 
       {/* ── VENTURE ARC ── */}
-      <section id="arc" className="py-20 px-6" style={{ background: BG_ALT }}>
+      <section id="arc" className="py-20 px-6" style={{ background: BG }}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-14">
             <p className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: TEAL }}>Module-driven learning</p>
@@ -356,7 +330,7 @@ export default function Page() {
       </section>
 
       {/* ── COACHING MODES ── */}
-      <section id="coaching" className="py-20 px-6" style={{ background: BG }}>
+      <section id="coaching" className="py-20 px-6" style={{ background: BG_ALT }}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-14">
             <p className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: TEAL }}>How Fin coaches</p>
@@ -395,7 +369,7 @@ export default function Page() {
       </section>
 
       {/* ── JUDGMENT ── */}
-      <section className="py-20 px-6" style={{ background: BG_ALT }}>
+      <section className="py-20 px-6" style={{ background: BG }}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-14">
             <p className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: TEAL }}>Coaching that holds its ground</p>
@@ -413,23 +387,23 @@ export default function Page() {
               </div>
             ))}
           </div>
+
+          {/* co-learner hold — rewritten to be honest about what the model actually does */}
           <div className="p-8 rounded-2xl"
                style={{ background: SURFACE, border: `1px solid ${TEAL}30`, boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}>
-            <p className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: TEAL }}>The co-learner hold</p>
+            <p className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: TEAL }}>The co-learner rule</p>
             <p className="text-2xl font-bold mb-4 leading-snug" style={{ color: TEXT }}>
               &quot;This is your kid&apos;s business.<br />Your job is questions, not answers.&quot;
             </p>
             <p className="text-sm leading-relaxed max-w-2xl" style={{ color: TEXT_2 }}>
-              When a parent starts directing the session — answering questions meant for the kid, steering decisions, taking over — Fin redirects directly:{" "}
-              <em style={{ color: TEXT }}>&quot;I want to hear your kid&apos;s take first.&quot;</em>{" "}
-              After three redirects that don&apos;t hold, Fin names the pattern and resets the co-learner contract. A parent who runs the session produces a kid who waits to be told what to do. That&apos;s the opposite of the goal.
+              The rules are written into the system. Fin is instructed to keep decisions with the kid — when questions get answered on their behalf, the session loops back to the open question and waits. The co-learner brief at the end of every session tells the parent exactly what to help with and what to leave alone. A kid who watches a parent run their business learns to wait to be told what to do. That&apos;s the opposite of the point.
             </p>
           </div>
         </div>
       </section>
 
       {/* ── RESEARCH ── */}
-      <section className="py-20 px-6" style={{ background: BG }}>
+      <section className="py-20 px-6" style={{ background: BG_ALT }}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-14">
             <p className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: TEAL }}>The foundation</p>
@@ -455,6 +429,37 @@ export default function Page() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── CLOSING SUMMARY ── */}
+      <section className="py-24 px-6" style={{ background: BG }}>
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="text-xs font-semibold uppercase tracking-wide mb-4" style={{ color: TEAL }}>What they walk away with</p>
+          <h2 className="text-3xl font-bold mb-6" style={{ lineHeight: 1.25 }}>
+            Six weeks. Three modules.<br />One thing that actually happened.
+          </h2>
+          <p className="text-base leading-relaxed mb-4" style={{ color: TEXT_2 }}>
+            By the end of Module 3, your kid has talked to a real potential customer, built a minimum version of their idea, and made at least one real sale — real money, real conversation, real debrief.
+          </p>
+          <p className="text-base leading-relaxed mb-10" style={{ color: TEXT_2 }}>
+            The concepts — pricing, margins, customer discovery, what a real cost looks like — live in their memory because every one was taught through the thing they were actually building. Not a workbook. Their idea.
+          </p>
+          <div className="p-8 rounded-2xl mb-6"
+               style={{ background: BG_ALT, border: `1px solid ${BORDER}` }}>
+            <p className="font-semibold mb-2" style={{ color: TEXT }}>The system is free.</p>
+            <p className="text-sm mb-5" style={{ color: TEXT_2 }}>
+              Clone the repo, point Claude Code at the folder, fill in the idea. Fin is live before you type a second word.
+            </p>
+            <a href="https://github.com/AK40Lu/fin" target="_blank" rel="noreferrer"
+               className="inline-block px-6 py-3 rounded-xl font-semibold text-white text-sm"
+               style={{ background: TEAL }}>
+              Get started on GitHub →
+            </a>
+          </div>
+          <p className="text-xs" style={{ color: TEXT_3 }}>
+            Requires Claude Code (free tier available) · No other dependencies
+          </p>
         </div>
       </section>
 
