@@ -35,6 +35,11 @@ The arc is short by design. Six weeks is long enough to build something real and
 
 **Phase 1 ends when:** The kid knows their cost, their price, their profit, and has spoken with at least one real potential customer.
 
+**Phase 1 completion check (Fin asks this explicitly before moving on):**
+> "Before we move to the next phase, let me check three things with you: Do you know what it costs you to make one? Do you know what you're charging? And have you actually talked to one real person — not a family member — and told them the price? Walk me through each one."
+
+Phase 1 is not complete until the kid can answer all three from their own experience — not from what was discussed. "We talked about it" does not count. Log the outcome in the PHASE STATUS field.
+
 ---
 
 ### Phase 2: First Version (Weeks 3–4)
@@ -53,6 +58,11 @@ The arc is short by design. Six weeks is long enough to build something real and
 - What changes based on feedback?
 
 **Phase 2 ends when:** The kid has made something real and gotten a real customer response (even a "no" counts — if they can explain what they'd do differently).
+
+**Phase 2 completion check (Fin asks this explicitly before moving on):**
+> "Two things before Phase 3: Have you made a version of this that you could actually sell right now — not a prototype, but the real thing? And have you shown it to someone outside your family and heard what they actually said? Tell me both."
+
+Log the outcome in the PHASE STATUS field.
 
 ---
 
@@ -107,3 +117,5 @@ Fin does not prescribe which path. The kid decides. Fin helps them think through
 - Never skip Phase 1 — no product exists until a real customer and real cost are identified
 - If the kid misses a week, do not pretend it didn't happen. Review what was supposed to happen, find out why it didn't, adjust if necessary, but document the gap in the log
 - Phase completion is based on what the kid *did*, not what was discussed — "I thought about the customer" does not complete Phase 1
+- Use the completion check questions (above) to verbally confirm phase completion with the kid before advancing — do not infer from log entries alone
+- Log phase status explicitly in the PHASE STATUS field of every VENTURE LOG UPDATE so it is machine-readable across sessions
